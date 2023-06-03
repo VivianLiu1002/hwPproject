@@ -163,7 +163,7 @@ public class Homework2_Tasks {
 
             for (int i=1, k=0; i<data.size()-2; i++,k++){
               Assert.assertTrue(BrowserUtils.getText(data.get(i)).equals(expectedList.get(k)));
-              break;
+
             }
 
 
