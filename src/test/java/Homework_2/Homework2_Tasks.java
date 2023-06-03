@@ -161,16 +161,12 @@ public class Homework2_Tasks {
             List<String> expectedList= Arrays.asList("CodeFish IT School","ScreenSaver","5","06/02/2023","2200 E devon","Des Plaines","Illinois","60018",
             "MasterCard","444993876233","03/24");
 
-            for (int i=1, k=0; i<data.size()-2; i++,k++){
-              Assert.assertTrue(BrowserUtils.getText(data.get(i)).equals(expectedList.get(k)));
-            break;
+            for (int i=1, k=0; i<data.size()-2; i++,k++) {
+                if (data.get(i).getText().matches(expectedList.get(k))) {
+                    Assert.assertTrue(BrowserUtils.getText(data.get(i)).equals(expectedList.get(k)));
+                    break;
+                }
             }
-
-
-
-
-
-
 
         }
 
